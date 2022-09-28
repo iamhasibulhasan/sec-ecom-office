@@ -1,3 +1,92 @@
 .clldd{
     z-index:999;
 }
+body{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Oswald', sans-serif; */
+    font-style: normal;
+    font-weight: 400;
+}
+nav{
+    background:white;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.menu-main{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position:relative;
+}
+.menu-main li{
+    display: inline-block;
+    margin-right: 10px;
+    
+}
+.menu-main li a{
+    color:#818a55;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu-main li:hover{
+    background: gray;
+    cursor: pointer;
+}
+
+.menu-main li:hover a{
+ color: white;
+}
+.menu-sub{
+ position: absolute;
+ left: 0;
+ background: #c6d47c;
+  width: 100%;
+  padding: 2em;
+ display:none;
+ z-index: 99;
+}
+.menu-main li:hover .menu-sub{
+  display:block;
+}
+
+.menu-sub ul{
+ padding: 0;
+}
+.menu-sub li{
+  display:block;
+  margin-right: 0px;
+}
+
+.menu-sub li a{
+  color: #818a55;
+}
+.menu-main li:hover .menu-sub li a{
+  color: #818a55;
+}
+
+.menu-main li:hover .menu-sub li:hover a{
+  color: white;
+}
+
+.menu-sub li a:hover{
+  color:white;
+}
+
+.menu-sub h3{
+  color:#edf5c3;
+  margin: 1em 0.5em 0.5em 0;
+}
+.menu-col-1{
+  float: left;
+  margin-right: 3em;
+  min-height: 262px;
+}
+
+.menu-col-1:last-of-type{
+  margin-right: 0;
+}

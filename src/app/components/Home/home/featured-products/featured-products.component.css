@@ -1,6 +1,77 @@
 .card-hover:hover{
     border: 2px solid red;
 }
+
+.photo{
+    position: relative;
+    overflow: hidden;
+
+}
+
+.border{
+    background-color: red;
+    position: absolute;
+    transition: .4s ease-in-out;
+}
+.border.top, .border.bottom{
+    height: 5px;
+    width: 270px;
+}
+.border.left, .border.right{
+    height: 272px;
+    width: 5px;
+}
+.border.top{
+    top: 1px;
+    right: 100%;
+}
+.border.bottom{
+    bottom: 12px;
+    left: 100%;
+}
+.border.left{
+    left: 0px;
+    top: 100%;
+}
+.border.right{
+    right: 0px;
+    bottom: 100%;
+}
+.photo:hover .border.top{
+    right: 5px;
+}
+.photo:hover .border.bottom{
+    left: 5px;
+}
+.photo:hover .border.left{
+    top: 5px;
+}
+.photo:hover .border.right{
+    bottom: 11px;
+}
+.photo::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .3s linear;
+}
+.photo:hover::before{
+    opacity: 1;
+}
+
+.learn-more{
+    opacity: 0;
+}
+.photo:hover .learn-more{
+    opacity: 1;
+    background-color: red;
+}
+
 .slider-position{
     margin-top: -440px;
 }
